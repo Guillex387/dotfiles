@@ -1,5 +1,6 @@
-rm ~/.config/fish/functions/fish_prompt.fish > /dev/null 2>&1
-omf theme agnoster > /dev/null 2>&1
-export VISUAL=nvim
-export EDITOR=nvim
+rm ~/.config/fish/functions/fish_prompt.fish &> /dev/null
+omf theme agnoster &> /dev/null
+export VISUAL=vim
+export EDITOR=vim
+. "$HOME/.cargo/env"
 exec fish
