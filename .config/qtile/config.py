@@ -31,6 +31,8 @@ keys = [
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
+    Key([mod], "Tab", lazy.next_layout()),
+    Key([mod, "Shift"], "Tab", lazy.prev_layout()),
 
     # Programs
     Key([mod], "Return", lazy.spawn("alacritty"), desc="Launch terminal"),
@@ -91,7 +93,11 @@ layout_theme = {
     "border_on_single": True
 }
 
-layouts = [layout.Columns(**layout_theme)]
+layouts = [
+  layout.MonadTall(**layout_theme),
+  layout.Max(**layout_theme),
+  layout.Columns(**layout_theme)
+]
 
 widget_defaults = dict(
     font="UbuntuMono Nerd Font Bold",
@@ -124,9 +130,17 @@ screens = [
                     text="",
                     fontsize=36,
                     padding=-3,
-                    foreground=theme["color1"]
+                    foreground=theme["color4"]
                 ),
-                widget.CPU(fmt="   {} ", format="{freq_current}GHz {load_percent}%", background=theme["color1"]),
+                widget.CPU(fmt="   {} ", format="{freq_current}GHz {load_percent}%", background=theme["color4"]),
+                widget.TextBox(
+                    text="",
+                    fontsize=36,
+                    padding=-3,
+                    foreground=theme["color1"],
+                    background=theme["color4"]
+                ),
+                widget.Memory(fmt=" {} ", format="{MemUsed: .0f}{mm}/{MemTotal: .0f}{mm}", background=theme["color1"]),
                 widget.TextBox(
                     text="",
                     fontsize=36,
@@ -134,7 +148,8 @@ screens = [
                     foreground=theme["color2"],
                     background=theme["color1"]
                 ),
-                widget.Memory(fmt=" {} ", format="{MemUsed: .0f}{mm}/{MemTotal: .0f}{mm}", background=theme["color2"]),
+                widget.CurrentLayoutIcon(scale=0.65, background=theme["color2"]),
+                widget.CurrentLayout(fmt=" {} ", background=theme["color2"]),
                 widget.TextBox(
                     text="",
                     fontsize=36,
