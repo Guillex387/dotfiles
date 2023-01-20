@@ -82,7 +82,8 @@ theme = {
     "color1": "#ff5555",
     "color2": "#A77AC4",
     "color3": "#7197E7",
-    "color4": "#ffb86c"
+    "color4": "#ffb86c",
+    "color5": "#98c379"
 }
 
 layout_theme = {
@@ -130,23 +131,23 @@ screens = [
                     text="",
                     fontsize=36,
                     padding=-3,
-                    foreground=theme["color4"]
+                    foreground=theme["grey"]
                 ),
-                widget.CPU(fmt="   {} ", format="{freq_current}GHz {load_percent}%", background=theme["color4"]),
+                widget.CPU(fmt="   {} ", format="{freq_current}GHz {load_percent}%", background=theme["grey"]),
                 widget.TextBox(
                     text="",
                     fontsize=36,
                     padding=-3,
-                    foreground=theme["color1"],
-                    background=theme["color4"]
+                    foreground=theme["color5"],
+                    background=theme["grey"]
                 ),
-                widget.Memory(fmt=" {} ", format="{MemUsed: .0f}{mm}/{MemTotal: .0f}{mm}", background=theme["color1"]),
+                widget.Memory(fmt=" {} ", format="{MemUsed: .0f}{mm}/{MemTotal: .0f}{mm}", background=theme["color5"]),
                 widget.TextBox(
                     text="",
                     fontsize=36,
                     padding=-3,
                     foreground=theme["color2"],
-                    background=theme["color1"]
+                    background=theme["color5"]
                 ),
                 widget.CurrentLayoutIcon(scale=0.65, background=theme["color2"]),
                 widget.CurrentLayout(fmt=" {} ", background=theme["color2"]),
