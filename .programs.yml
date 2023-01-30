@@ -10,7 +10,12 @@ My Arch Programs:
   nmcli: network manager
   picom: graphic driver
   nvim: neovim terminal editor
-  fish: fish shell,
+  fish: fish shell
   scrot: a program for take screen captures
 
-Dev enviroments: nodejs and npm, python3 and pip, go lang, clang, rust
+Dev enviroments:
+  nodejs_npm
+  python3_pip
+  go_lang
+  clang
+  rust
