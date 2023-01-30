@@ -3,7 +3,8 @@ local maps = {
     buffers = { key = '<leader>sb', desc = 'Telescope: [S]earch existing [B]uffers' },
     find_files = { key = '<leader>sf', desc = 'Telescope: [S]earch [F]iles' },
     grep_string = { key = '<leader>ss', desc = 'Telescope: [S]earch [S]tring' },
-    help_tags = { key = '<leader>sh', desc = 'Telescope: [S]earch [H]elp' }
+    help_tags = { key = '<leader>sh', desc = 'Telescope: [S]earch [H]elp' },
+    keymaps = { key = '<leader>sk', desc = 'Telescope: [S]earch [K]eymaps' }
   },
   navigation = {
     next_buf = { key = '<TAB>', desc = 'Navigation: Switch to next buffer' },

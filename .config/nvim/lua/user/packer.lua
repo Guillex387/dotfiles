@@ -58,4 +58,6 @@ require('packer').startup(function(use)
   use 'akinsho/toggleterm.nvim'
   -- Auto closing tags
   use 'windwp/nvim-autopairs'
+  -- Add color highlight
+  use 'norcalli/nvim-colorizer.lua'
 end)
