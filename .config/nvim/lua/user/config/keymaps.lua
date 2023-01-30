@@ -47,7 +47,7 @@ local maps = {
     prev = { key = '<S-TAB>', desc = 'CMP: Move to previous suggestion' }
   },
   toggleterm = {
-    toggle = { key = '<leader>tt', desc = 'Toggleterm: [T]oggle a [T]erminal' }
+    toggle = { key = '<C-t>', desc = 'Toggleterm: [T]oggle a terminal' }
   }
 }
 
