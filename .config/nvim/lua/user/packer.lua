@@ -56,4 +56,6 @@ require('packer').startup(function(use)
   }
   -- Integrated terminal
   use 'akinsho/toggleterm.nvim'
+  -- Auto closing tags
+  use 'windwp/nvim-autopairs'
 end)

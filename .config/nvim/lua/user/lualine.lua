@@ -6,5 +6,8 @@ require('lualine').setup {
 }
 
 require('tabline').setup {
-  enable = true
+  enable = true,
+  options = {
+    show_filename_only = true
+  }
 }

@@ -14,5 +14,4 @@ require 'user.treesitter'
 require 'user.lsp'
 require 'user.cmp'
 require 'user.toggleterm'
--- TODO: integrate the clipboard in the editor
--- TODO: put the autopairs plugin (https://github.com/windwp/nvim-autopairs)
+require 'user.autopairs'
