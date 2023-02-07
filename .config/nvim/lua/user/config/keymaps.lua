@@ -25,8 +25,7 @@ local maps = {
     rn = { key = 'r', desc = 'Nvim-tree: [R]ename a file/directory' }
   },
   comment = {
-    selection = { key = '<leader>cc', desc = 'Comment: Toggle comment selection' },
-    line = { key = '<leader>cl', desc = 'Comment: Toggle comment line' }
+    toggle = { key = '<leader>cc', desc = 'Comment: Toggle comment' }
   },
   lsp = {
     rename = { key = '<leader>lr', desc = 'LSP: [R]e[n]ame' },
