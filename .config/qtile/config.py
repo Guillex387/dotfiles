@@ -37,7 +37,7 @@ keys = [
     # Programs
     Key([mod], "Return", lazy.spawn("alacritty"), desc="Launch terminal"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
-    Key([mod], "m", lazy.spawn("rofi -show run")),
+    Key([mod], "m", lazy.spawn("rofi -show combi")),
     Key([mod, "shift"], "m", lazy.spawn("rofi -show")),
     Key([mod], "c", lazy.spawn("code")),
     Key([mod], "f", lazy.spawn("firefox")),
