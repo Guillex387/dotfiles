@@ -14,7 +14,11 @@ local maps = {
     win_left = { key = '<C-h>', desc = 'Navigation: Move to left split' },
     win_right = { key = '<C-l>', desc = 'Navigation: Move to right split' },
     win_down = { key = '<C-j>', desc = 'Navigation: Move to bottom split' },
-    win_up = { key = '<C-k>', desc = 'Navigation: Move to top split' }
+    win_up = { key = '<C-k>', desc = 'Navigation: Move to top split' },
+    resize_left = { key = '<C-Left>', desc = 'Navigation: Resize the window to left' },
+    resize_right = { key = '<C-Right>', desc = 'Navigation: Resize the window to right' },
+    resize_down = { key = '<C-Up>', desc = 'Navigation: Resize the window to bottom' },
+    resize_up = { key = '<C-Down>', desc = 'Navigation: Resize the window to top' }
   },
   nvim_tree = {
     toggle = { key = '<leader>ee', desc = 'Nvim-tree: Toggle [E]xplorer' },
@@ -47,6 +51,9 @@ local maps = {
   },
   toggleterm = {
     toggle = { key = '<C-t>', desc = 'Toggleterm: [T]oggle a terminal' }
+  },
+  git = {
+    toggle = { key = '<leader>gg', desc = 'GitSigns: Toggle [G]it hunks' }
   }
 }
 
