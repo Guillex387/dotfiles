@@ -12,10 +12,11 @@ My Arch Programs:
   nvim: neovim terminal editor
   fish: fish shell
   scrot: a program for take screen captures
+  tlp: tlp and tlp ui for battery config (acpid for the controller)
 
 Dev enviroments:
   nodejs_npm
   python3_pip
   go_lang
-  clang
+  clang (with make and cmake)
   rust
