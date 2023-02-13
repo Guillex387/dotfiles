@@ -23,4 +23,3 @@ require('nvim-tree').setup {
 local api = require('nvim-tree.api')
 
 keymap(nt_maps.toggle, api.tree.toggle)
-keymap(nt_maps.focus, api.tree.focus)

@@ -2,7 +2,7 @@ local maps = {
   telescope = {
     buffers = { key = '<leader>sb', desc = 'Telescope: [S]earch existing [B]uffers' },
     find_files = { key = '<leader>sf', desc = 'Telescope: [S]earch [F]iles' },
-    grep_string = { key = '<leader>ss', desc = 'Telescope: [S]earch [S]tring' },
+    live_grep = { key = '<leader>ss', desc = 'Telescope: [S]earch [S]tring' },
     help_tags = { key = '<leader>sh', desc = 'Telescope: [S]earch [H]elp' },
     keymaps = { key = '<leader>sk', desc = 'Telescope: [S]earch [K]eymaps' }
   },
@@ -22,7 +22,6 @@ local maps = {
   },
   nvim_tree = {
     toggle = { key = '<leader>ee', desc = 'Nvim-tree: Toggle [E]xplorer' },
-    focus = { key = '<leader>ef', desc = 'Nvim-tree: [E]xplorer [F]ocus' },
     cd = { key = '<leader>ec', desc = 'Nvim-tree: [E]xplorer [C]hange directory' },
     add = { key = 'a', desc = 'Nvim-tree: [A]dd a file/directory' },
     rm = { key = 'd', desc = 'Nvim-tree: [D]elete a file/directory' },
