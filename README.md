@@ -22,6 +22,8 @@ os-prober
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
+For customize the grub menu, visit this [repo](https://github.com/vinceliuice/grub2-themes)
+
 ### Making your user
 
 ```bash
