@@ -1,1 +1,1 @@
-picom --config ~/picom.conf &
+setxkbmap es &

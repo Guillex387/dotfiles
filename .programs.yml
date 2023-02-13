@@ -1,14 +1,11 @@
 My Arch Programs:
-  code: VScode IDE
   firefox: firefox browser
   alacritty: terminal emulator
   pavucontrol: audio GUI controller
-  polo-gtk: polo file manager
   ranger: terminal file manager
   vlc: video player
   eog: image viewer
   nmcli: network manager
-  picom: graphic driver
   nvim: neovim terminal editor
   fish: fish shell
   scrot: a program for take screen captures
