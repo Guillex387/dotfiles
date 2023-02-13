@@ -39,9 +39,8 @@ keys = [
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     Key([mod], "m", lazy.spawn("rofi -show combi")),
     Key([mod, "shift"], "m", lazy.spawn("rofi -show")),
-    Key([mod], "c", lazy.spawn("code")),
+    Key([mod], "c", lazy.spawn("alacritty -e nvim")),
     Key([mod], "f", lazy.spawn("firefox")),
-    Key([mod], "p", lazy.spawn("polo-gtk")),
     Key([mod, "shift"], "s", lazy.spawn("scrot")),
     # Volume
     Key([], "XF86AudioLowerVolume", lazy.spawn(
