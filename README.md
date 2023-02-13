@@ -91,7 +91,7 @@ yay -S lightdm-webkit-theme-aether
 
 ### Config the login manager
 
-**/etc/lightdm/lightdm.conf**
+**/etc/lightdm/lightdm.conf**:
 
 ```ini
 [Seat:*]
@@ -102,13 +102,13 @@ greeter-session = lightdm-webkit2-greeter
 webkit_theme = lightdm-webkit-theme-aether
 ```
 
-Then enable the service
+Then enable the service:
 
 ```bash
 systemctl enable lightdm
 ```
 
-Setup the user boot commands
+Setup the user boot commands:
 
 ```bash
 ln -s /home/user/configs/.xprofile /home/user/.xprofile
@@ -120,13 +120,13 @@ ln -s /home/user/configs/.xprofile /home/user/.xprofile
 ln -s /home/user/configs/.config/qtile /home/user/.config/qtile
 ```
 
-For open the programs i use rofi
+For open the programs i use rofi:
 
 ```
 ln -s /home/user/configs/.config/rofi /home/user/.config/rofi
 ```
 
-And the papirus icon theme
+And the papirus icon theme:
 
 ```bash
 pacman -S papirus-icon-theme
@@ -162,13 +162,13 @@ yay -S tlpui
 ```bash
 pacman -S ntp
 systemctl enable ntpd
-# Sync the our with the command below
+# Sync the hour with the command below
 timedatectl set-ntp true
 ```
 
 ## Terminal and shell
 
-I use alacritty for the terminal client
+I use alacritty for the terminal client:
 
 ```bash
 pacman -S alacritty
@@ -179,13 +179,13 @@ ln -s /home/user/configs/.config/alacritty /home/user/.config/alacritty
 ln -s /home/user/configs/.bashrc /home/user/.bashrc
 ```
 
-For shell i use fish
+For shell i use fish:
 
 ```bash
 pacman -S fish
 ```
 
-And for the fish themes i use [oh my fish](https://github.com/oh-my-fish/oh-my-fish)
+And for the fish themes i use [oh my fish](https://github.com/oh-my-fish/oh-my-fish):
 
 ```bash
 # When the omf was installed
@@ -209,7 +209,7 @@ pacman -S ranger
 
 ### Code editor
 
-I use neovim as my text editor
+I use neovim as my text editor:
 
 ```bash
 pacman -S neovim
@@ -244,11 +244,11 @@ pacman clang make cmake
 
 ### Rust
 
-See the install guide in his [web](https://www.rust-lang.org/tools/install)
+See the install guide in his [web](https://www.rust-lang.org/tools/install).
 
 ### Windows tooling
 
-Add this in **/etc/pacman.conf**
+Add this in **/etc/pacman.conf**:
 
 ```ini
 [multilib]
