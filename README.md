@@ -9,7 +9,7 @@ Note: the folder "configs" is the clone of this repo.
 
 ```bash
 pacman -S networkmanager
-systemctl enable networkmanager
+systemctl enable NetworkManager
 ```
 
 ### Install the bootloader Grub
@@ -62,7 +62,8 @@ pacman -S unzip curl wget
 
 ## AUR
 
-In my case a using yay, install with the [official guide](https://github.com/Jguer/yay).
+In my case I'm using yay, install with
+the [official guide](https://github.com/Jguer/yay).
 
 ## Fonts
 
@@ -80,7 +81,7 @@ And for the nerd font, download the [zip](https://github.com/ryanoasis/nerd-font
 mkdir ~/.local/share/fonts/
 # And unzip the content and install it
 unzip font.zip
-mv *.ttf
+mv *.ttf ~/.local/share/fonts/
 fc-cache -f -v
 ```
 

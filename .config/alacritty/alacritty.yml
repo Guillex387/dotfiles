@@ -15,7 +15,7 @@ window:
 
 colors:
   primary:
-    background: "#282a36"
+    background: "#292d3e"
     foreground: "#f8f8f2"
     bright_foreground: "#ffffff"
   cursor:
