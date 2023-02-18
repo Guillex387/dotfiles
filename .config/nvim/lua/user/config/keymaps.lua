@@ -9,8 +9,7 @@ local maps = {
   navigation = {
     next_buf = { key = '<TAB>', desc = 'Navigation: Switch to next buffer' },
     prev_buf = { key = '<S-TAB>',  desc = 'Navigation: Switch to previous buffer' },
-    close_buf = { key = '<leader>ww', desc = 'Navigation: Close a buffer' },
-    close_force_buf = { key = '<leader>wf', desc = 'Navigation: Close a buffer (force)' },
+    close_buf = { key = '<C-w>', desc = 'Navigation: Close a buffer' },
     win_left = { key = '<C-h>', desc = 'Navigation: Move to left split' },
     win_right = { key = '<C-l>', desc = 'Navigation: Move to right split' },
     win_down = { key = '<C-j>', desc = 'Navigation: Move to bottom split' },
