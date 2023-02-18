@@ -9,8 +9,7 @@ local n_maps = require('user.config.keymaps').navigation
 -- Tabs
 keymap(n_maps.next_buf, 'TablineBufferNext')
 keymap(n_maps.prev_buf, 'TablineBufferPrevious')
-keymap(n_maps.close_buf, 'bd')
-keymap(n_maps.close_force_buf, 'bd!')
+keymap(n_maps.close_buf, 'bd!')
 -- Splits navigation
 keymap(n_maps.win_left, 'wincmd h')
 keymap(n_maps.win_right, 'wincmd l')
