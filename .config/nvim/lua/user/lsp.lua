@@ -27,18 +27,25 @@ require('mason').setup {}
 
 local mason_lspconfig = require 'mason-lspconfig'
 
+local server_names = {}
+for server, _ in pairs(servers) do
+  table.insert(server_names, server)
+end
+
 mason_lspconfig.setup {
-  ensure_installed = servers
+  ensure_installed = server_names
 }
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 mason_lspconfig.setup_handlers {
   function(server_name)
-    require('lspconfig')[server_name].setup {
+    local opts = {
       capabilities = capabilities,
       on_attach = on_attach
     }
+    opts = vim.tbl_deep_extend("force", servers[server_name], opts)
+    require('lspconfig')[server_name].setup(opts);
   end
 }
 

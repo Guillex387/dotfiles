@@ -1,7 +1,5 @@
 local cmp = require 'cmp'
 local luasnip = require 'luasnip'
-local cmp_autopairs = require 'nvim-autopairs.completion.cmp'
-
 
 local kind_icons = require('user.config.icons').kind
 local cmp_maps = require('user.config.keymaps').cmp
@@ -13,11 +11,6 @@ local has_words_before = function()
 end
 
 vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
-
-cmp.event:on(
-  'confirm_done',
-  cmp_autopairs.on_confirm_done()
-)
 
 cmp.setup {
   snippet = {
