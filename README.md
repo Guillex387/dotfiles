@@ -212,10 +212,10 @@ pacman -S ranger
 
 ### Code editor
 
-I use neovim as my text editor:
+I use neovim as my text editor.
 
 ```bash
-pacman -S neovim
+pacman -S neovim xsel fd
 # Setup the config
 ln -s /home/user/configs/.config/nvim /home/user/.config/nvim
 nvim +PackerSync

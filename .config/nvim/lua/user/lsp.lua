@@ -17,6 +17,7 @@ local on_attach = function(client, buffer)
   keymap(l_maps.symbols, require('telescope.builtin').lsp_dynamic_workspace_symbols)
   keymap(l_maps.documentation, vim.lsp.buf.hover)
   keymap(l_maps.format, vim.lsp.buf.formatting)
+  keymap(l_maps.diagnostic, vim.diagnostic.open_float)
 end
 
 

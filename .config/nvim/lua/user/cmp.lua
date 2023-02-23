@@ -1,5 +1,7 @@
 local cmp = require 'cmp'
 local luasnip = require 'luasnip'
+local cmp_autopairs = require 'nvim-autopairs.completion.cmp'
+
 
 local kind_icons = require('user.config.icons').kind
 local cmp_maps = require('user.config.keymaps').cmp
@@ -10,15 +12,23 @@ local has_words_before = function()
   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 
+vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
+
+cmp.event:on(
+  'confirm_done',
+  cmp_autopairs.on_confirm_done()
+)
+
 cmp.setup {
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body)
-    end,
+    end
   },
   mapping = cmp.mapping.preset.insert {
     [cmp_maps.scroll_down.key] = cmp.mapping.scroll_docs(-4),
     [cmp_maps.scroll_up.key] = cmp.mapping.scroll_docs(4),
+    [cmp_maps.abort.key] = cmp.mapping.abort(),
     [cmp_maps.complete.key] = cmp.mapping.complete(),
     [cmp_maps.confirm.key] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Replace,
@@ -58,9 +68,22 @@ cmp.setup {
       return vim_item
     end,
   },
+  window = {
+    documentation = cmp.config.window.bordered()
+  },
   sources = {
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
     { name = 'path' }
-  }
+  },
+  enable = function()
+    local context = require 'cmp.config.context'
+    if vim.api.nvim_get_mode().mode == 'c' then
+      return true
+    else
+      return not context.in_treesitter_capture('comment')
+        and not context.in_syntax_group('Comment')
+    end
+  end
 }
+

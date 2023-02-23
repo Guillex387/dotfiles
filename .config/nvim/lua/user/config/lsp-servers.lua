@@ -1,3 +1,3 @@
-local servers = { 'clangd', 'gopls' }
+local servers = { 'clangd', 'gopls', 'tsserver' }
 
 return servers

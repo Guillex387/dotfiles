@@ -37,6 +37,7 @@ local maps = {
     type = { key = '<leader>lt', desc = 'LSP: Goto [T]ype definition' },
     symbols = { key = '<leader>lw', desc = 'LSP: [W]orkspace symbols' },
     documentation = { key = '<leader>ld', desc = 'LSP: Hover [D]ocumentation' },
+    diagnostic = { key = '<leader>dd', desc = 'LSP: Toggle actual [D]iagnostic' },
     format = { key = '<leader>ff', desc = 'LSP: [F]ormat document' }
   },
   cmp = {
@@ -45,6 +46,7 @@ local maps = {
     complete = { key = '<C-Space>', desc = 'CMP: Complete the suggestion' },
     confirm = { key = '<CR>', desc = 'CMP: Confirm the suggestion' },
     next = { key = '<TAB>', desc = 'CMP: Move to next suggestion' },
+    abort = { key = '<C-e>', desc= 'CMP: Abort the menu' },
     prev = { key = '<S-TAB>', desc = 'CMP: Move to previous suggestion' }
   },
   toggleterm = {
