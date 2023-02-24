@@ -214,6 +214,8 @@ pacman -S ranger
 
 I use neovim as my text editor.
 
+Install [Packer](https://github.com/wbthomason/packer.nvim) for plugins management.
+
 ```bash
 pacman -S neovim xsel fd
 # Setup the config
