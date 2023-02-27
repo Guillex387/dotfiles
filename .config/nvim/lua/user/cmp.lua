@@ -12,6 +12,11 @@ end
 
 vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
 
+luasnip.config.setup {
+    region_check_events = "CursorHold,InsertLeave",
+    delete_check_events = "TextChanged,InsertEnter"
+}
+
 cmp.setup {
   snippet = {
     expand = function(args)
