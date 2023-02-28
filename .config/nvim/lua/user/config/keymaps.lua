@@ -47,7 +47,9 @@ local maps = {
     confirm = { key = '<CR>', desc = 'CMP: Confirm the suggestion' },
     next = { key = '<TAB>', desc = 'CMP: Move to next suggestion' },
     abort = { key = '<C-e>', desc= 'CMP: Abort the menu' },
-    prev = { key = '<S-TAB>', desc = 'CMP: Move to previous suggestion' }
+    prev = { key = '<S-TAB>', desc = 'CMP: Move to previous suggestion' },
+    snip_next = { key = '<C-n>', desc = 'CMP: Move to next field of the snippet' },
+    snip_prev = { key = '<C-b>', desc = 'CMP: Move to previous field of the snippet' }
   },
   toggleterm = {
     toggle = { key = '<C-t>', desc = 'Toggleterm: [T]oggle a terminal' }

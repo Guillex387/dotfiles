@@ -4,18 +4,7 @@ local luasnip = require 'luasnip'
 local kind_icons = require('user.config.icons').kind
 local cmp_maps = require('user.config.keymaps').cmp
 
-local has_words_before = function()
-  unpack = unpack or table.unpack
-  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-  return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
-end
-
 vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
-
-luasnip.config.setup {
-    region_check_events = "CursorHold,InsertLeave",
-    delete_check_events = "TextChanged,InsertEnter"
-}
 
 cmp.setup {
   snippet = {
@@ -23,22 +12,18 @@ cmp.setup {
       luasnip.lsp_expand(args.body)
     end
   },
-  mapping = cmp.mapping.preset.insert {
+  mapping = cmp.mapping.preset.insert({
     [cmp_maps.scroll_down.key] = cmp.mapping.scroll_docs(-4),
     [cmp_maps.scroll_up.key] = cmp.mapping.scroll_docs(4),
     [cmp_maps.abort.key] = cmp.mapping.abort(),
     [cmp_maps.complete.key] = cmp.mapping.complete(),
     [cmp_maps.confirm.key] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Replace,
-      select = true,
+      select = true
     },
     [cmp_maps.next.key] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
-      elseif luasnip.expand_or_jumpable() then
-        luasnip.expand_or_jump()
-      elseif has_words_before() then
-        fallback()
       else
         fallback()
       end
@@ -46,13 +31,25 @@ cmp.setup {
     [cmp_maps.prev.key] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
-      elseif luasnip.jumpable(-1) then
-        luasnip.jump(-1)
       else
         fallback()
       end
     end, { 'i', 's' }),
-  },
+    [cmp_maps.snip_next.key] = cmp.mapping(function (fallback)
+      if luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+      else
+        fallback()
+      end
+    end, { 'i', 's' }),
+    [cmp_maps.snip_prev.key] = cmp.mapping(function (fallback)
+      if luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+      else
+        fallback()
+      end
+    end, { 'i', 's' })
+  }),
   formatting = {
     fields = { 'kind', 'abbr', 'menu' },
     format = function(entry, vim_item)
