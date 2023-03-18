@@ -1,7 +1,7 @@
 # My dotfiles
 
 This is a repo with my configurations of my work enviroment.
-I use [Arch linux](https://archlinux.org/), neovim, and Qtile window manager.
+I use [Arch linux](https://archlinux.org/), [neovim](https://neovim.io/), and [Qtile](http://www.qtile.org/) window manager.
 
 **NOTE: this repo is constantly changing with new features and tools.**
 
