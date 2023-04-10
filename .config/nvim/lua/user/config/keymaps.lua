@@ -56,6 +56,10 @@ local maps = {
   },
   git = {
     toggle = { key = '<leader>gg', desc = 'GitSigns: Toggle [G]it hunks' }
+  },
+  indent = {
+    vtab = { key = '<TAB>', desc = 'Indent: Tab a selection' },
+    vdetab = { key = '<S-TAB>', desc = 'Indent: Detab a selection' }
   }
 }
 
