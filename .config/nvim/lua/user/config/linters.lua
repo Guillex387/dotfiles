@@ -1,3 +1,0 @@
-local linters = {}
-
-return linters
