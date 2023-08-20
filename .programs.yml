@@ -4,12 +4,13 @@ My Arch Programs:
   pavucontrol: audio GUI controller
   ranger: terminal file manager
   vlc: video player
-  eog: image viewer
+  nsxiv: image viewer
   nmcli: network manager
   nvim: neovim terminal editor
   fish: fish shell
   scrot: a program for take screen captures
   tlp: tlp and tlp ui for battery config (acpid for the controller)
+  asusctl: asus laptop hadware controller
 
 Dev enviroments:
   nodejs_npm
@@ -17,3 +18,4 @@ Dev enviroments:
   go_lang
   clang (with make and cmake)
   rust
+  bun
