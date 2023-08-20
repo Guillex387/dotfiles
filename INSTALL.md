@@ -126,7 +126,7 @@ ln -s /home/user/configs/.config/qtile /home/user/.config/qtile
 
 For open the programs i use rofi:
 
-```
+```bash
 ln -s /home/user/configs/.config/rofi /home/user/.config/rofi
 ```
 
@@ -200,13 +200,15 @@ omf theme agnoster
 ## Multimedia
 
 ```bash
-pacman -S eog vlc
+pacman -S nsxiv vlc
 ```
 
 ## File explorer
 
 ```bash
 pacman -S ranger
+# Setup the config
+ln -s /home/guillex/configs/.config/ranger /home/guillex/.config/ranger
 ```
 
 ## Development
@@ -251,16 +253,3 @@ pacman -S clang make cmake
 ### Rust
 
 See the install guide in his [web](https://www.rust-lang.org/tools/install).
-
-### Windows tooling
-
-Add this in **/etc/pacman.conf**:
-
-```ini
-[multilib]
-Include = /etc/pacman.d/mirrorlist
-```
-
-```bash
-pacman -Sy wine
-```
