@@ -181,6 +181,8 @@ pacman -S alacritty
 ```bash
 ln -s /home/user/configs/.config/alacritty /home/user/.config/alacritty
 ln -s /home/user/configs/.bashrc /home/user/.bashrc
+# And create the .enviroment for env configs with a bash script
+echo '#!/bin/bash' > .enviroment
 ```
 
 For shell i use fish:
