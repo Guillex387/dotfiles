@@ -185,18 +185,10 @@ ln -s /home/user/configs/.bashrc /home/user/.bashrc
 echo '#!/bin/bash' > .enviroment
 ```
 
-For shell i use fish:
+For shell i use [nushell](http://www.nushell.sh/):
 
 ```bash
-pacman -S fish
-```
-
-And for the fish themes i use [oh my fish](https://github.com/oh-my-fish/oh-my-fish):
-
-```bash
-# When the omf was installed
-omf install agnoster
-omf theme agnoster
+pacman -S nushell
 ```
 
 ## Multimedia
