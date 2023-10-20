@@ -189,6 +189,8 @@ For shell i use [nushell](http://www.nushell.sh/):
 
 ```bash
 pacman -S nushell
+# And copy the config
+ln -s /home/user/configs/.config/nushell /home/user/.config/nushell
 ```
 
 ## Multimedia
