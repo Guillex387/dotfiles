@@ -40,7 +40,7 @@ keys = [
     Key([mod], "m", lazy.spawn("rofi -show combi")),
     Key([mod, "shift"], "m", lazy.spawn("rofi -show")),
     Key([mod], "c", lazy.spawn("alacritty -e nvim")),
-    Key([mod], "f", lazy.spawn("firefox-developer-edition")),
+    Key([mod], "f", lazy.spawn("brave-nightly")),
     Key([mod, "shift"], "s", lazy.spawn("scrot")),
     # Volume
     Key([], "XF86AudioLowerVolume", lazy.spawn(
@@ -57,7 +57,7 @@ keys = [
     Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
 ]
 
-groups = [Group(i) for i in ["  ", "  ", "  ", "  ", "  ", "  "]]
+groups = [Group(i) for i in ["  ", " 󰖟 ", "  ", "  ", "  ", "  "]]
 
 for i, group in enumerate(groups):
     actual_key = str(i + 1)

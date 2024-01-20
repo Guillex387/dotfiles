@@ -89,7 +89,7 @@ fc-cache -f -v
 ## Desktop and login manager
 
 ```bash
-pacman -S xorg xorg-xinit lightdm lightdm-webkit2-greeter qtile alacritty python python-psutil rofi scrot firefox
+pacman -S xorg xorg-xinit lightdm lightdm-webkit2-greeter qtile alacritty python python-psutil rofi scrot
 yay -S lightdm-webkit-theme-aether
 ```
 
