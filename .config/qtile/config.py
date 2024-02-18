@@ -94,9 +94,8 @@ layout_theme = {
 }
 
 layouts = [
-  layout.MonadTall(**layout_theme),
-  layout.Max(**layout_theme),
-  layout.Columns(**layout_theme)
+  layout.Columns(**layout_theme),
+  layout.Max(**layout_theme)
 ]
 
 widget_defaults = dict(
