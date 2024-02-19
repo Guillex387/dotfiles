@@ -90,7 +90,7 @@ fc-cache -f -v
 
 ```bash
 pacman -S xorg xorg-xinit lightdm lightdm-webkit2-greeter qtile alacritty python python-psutil rofi scrot
-yay -S lightdm-webkit-theme-aether
+yay -S lightdm-webkit-theme-aether python-pulsectl-asyncio
 ```
 
 ### Config the login manager
