@@ -89,21 +89,20 @@ fc-cache -f -v
 ## Desktop and login manager
 
 ```bash
-pacman -S xorg xorg-xinit lightdm lightdm-webkit2-greeter qtile alacritty python python-psutil rofi scrot
-yay -S lightdm-webkit-theme-aether python-pulsectl-asyncio
+pacman -S xorg xorg-xinit lightdm qtile alacritty python python-psutil rofi scrot
+yay -S web-greeter web-greeter-theme-shikai python-pulsectl-asyncio
 ```
 
 ### Config the login manager
+
+For set-up the theme follow the instructions of [Shikai Theme](https://github.com/TheWisker/Shikai)
 
 **/etc/lightdm/lightdm.conf**:
 
 ```ini
 [Seat:*]
 # Uncomment this line for modify the greeter
-greeter-session = lightdm-webkit2-greeter
-[greeter]
-# And add this for set the theme for the login 
-webkit_theme = lightdm-webkit-theme-aether
+greeter-session = web-greeter
 ```
 
 Then enable the service:
