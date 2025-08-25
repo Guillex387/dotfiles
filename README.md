@@ -1,4 +1,6 @@
-# My dotfiles
+# My dotfiles (old)
+
+This config is no longer used, check my new [dotfiles](https://github.com/Guillex387/dotfiles).
 
 This is a repo with my configurations of my work enviroment.
 I use [Arch linux](https://archlinux.org/), [neovim](https://neovim.io/), and [Qtile](http://www.qtile.org/) window manager.
