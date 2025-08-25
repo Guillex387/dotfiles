@@ -5,6 +5,8 @@ I use [Arch linux](https://archlinux.org/), [neovim](https://neovim.io/), and [Q
 
 **NOTE: this repo is constantly changing with new features and tools.**
 
+**WARNING: the qtile config is for versions below 0.28.1**
+
 ![System capture](./captures/system.png)
 
 ## Installation
